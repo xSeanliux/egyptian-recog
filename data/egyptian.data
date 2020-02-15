@@ -1,4 +1,4 @@
 classes = 5
 train = ./data/training_images.txt
-valid = ./data/testing_images.txt
+test = ./data/testing_images.txt
 names = ./data/egyptian.names
