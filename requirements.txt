@@ -1,0 +1,11 @@
+pyqt5==5.10.1
+lxml==4.2.4
+numpy
+torch>=1.0
+torchvision
+matplotlib
+tensorflow
+tensorboard
+terminaltables
+pillow
+tqdm
