@@ -1,5 +1,5 @@
 # Egyptian-recog
-YTP 專題計劃 \\
+YTP 專題計劃 \
 
 By Sean Liu, Casper Wang, Eric Xiao from CK high school
 ## Goal
