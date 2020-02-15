@@ -1,0 +1,4 @@
+classes = 31
+train = ./data/training_images.txt
+test = ./data/testing_images.txt
+names = ./data/226bot.names
