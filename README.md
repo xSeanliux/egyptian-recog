@@ -18,4 +18,4 @@ Tries to recognize Ancient Egyptian text from stelae or murals and the sort
 ## What we have done
 
 ## Notes
-* Change all the `filters=255` to `filters=[5 + n]*3`, where `n` is the number of classes. Also modify the `classes` parameter below. See [this tutorial](https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data) for more info. 
+* Change all the `filters=255` to `filters=[5 + n]*3`, where `n` is the number of classes in the `*.cfg` file. Also modify the `classes` parameter below. See [this tutorial](https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data) for more info. 
