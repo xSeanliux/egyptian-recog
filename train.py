@@ -202,7 +202,7 @@ def train():
     model.nc = nc  # attach number of classes to model
     model.arc = opt.arc  # attach yolo architecture
     model.hyp = hyp  # attach hyperparameters to model
-    # model.class_weights = labels_to_class_weights(dataset.labels, nc).to(device)  # attach class weights
+    #model.class_weights = labels_to_class_weights(dataset.labels, nc).to(device)  # attach class weights
     # model_info(model, report='summary')  # 'full' or 'summary'
     nb = len(dataloader)
     maps = np.zeros(nc)  # mAP per class
@@ -371,7 +371,7 @@ def train():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--epochs', type=int, default=5)  # 500200 batches at bs 16, 117263 images = 273 epochs
+    parser.add_argument('--epochs', type=int, default=100)  # 500200 batches at bs 16, 117263 images = 273 epochs
     parser.add_argument('--batch-size', type=int, default=32)  # effective bs = batch_size * accumulate = 16 * 4 = 64
     parser.add_argument('--accumulate', type=int, default=2, help='batches to accumulate before optimizing')
     parser.add_argument('--cfg', type=str, default='cfg/yolov3-tiny.cfg', help='cfg file path')
