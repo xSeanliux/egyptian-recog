@@ -1,2 +1,1 @@
 ./data/images/image_01.jpg
-./data/images/image_02.jpg

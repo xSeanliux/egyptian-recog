@@ -1,4 +1,7 @@
+./data/images/image_02.jpg
 ./data/images/image_03.jpg
 ./data/images/image_04.jpg
 ./data/images/image_05.jpg
 ./data/images/image_06.jpg
+./data/images/image_07.jpg
+
