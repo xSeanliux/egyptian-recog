@@ -4,9 +4,4 @@
 ./data/images/image_05.jpg
 ./data/images/image_06.jpg
 ./data/images/image_07.jpg
-./data/images/image_08.jpg
-./data/images/image_09.jpg
-./data/images/image_10.jpg
-
-
 
