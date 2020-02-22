@@ -3,3 +3,5 @@ runs/*
 output/*
 results.txt
 *.pt
+*.pt
+results.txt
