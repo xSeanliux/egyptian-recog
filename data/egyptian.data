@@ -1,4 +1,4 @@
-classes = 5
+classes = 21
 train = ./data/training_images.txt
 test = ./data/testing_images.txt
 names = ./data/egyptian.names
