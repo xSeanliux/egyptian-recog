@@ -8,5 +8,3 @@
 ./data/images/image_09.jpg
 ./data/images/image_10.jpg
 
-
-
