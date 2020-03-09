@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增圖片</title>
+</head>
+<body>
+    <h1>新增圖片</h1>
+    <form action="/upload_image/add/" enctype="multipart/form-data" method="post">
+        {% csrf_token %}
+        <label for="image_name">圖片編號:</label>
+        <input type="text" name="image_name"><br><br>
+        <label for="image_content">圖片:</label><br>
+        <input type="file" name="image_content"><br><br>
+        <input type="submit" value="提交">
+
+    </form>
+</body>
+</html>
