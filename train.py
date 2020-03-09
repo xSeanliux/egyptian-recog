@@ -24,7 +24,7 @@ results_file = 'results.txt'
 hyp = {'giou': 1.582,  # giou loss gain
        'cls': 27.76,  # cls loss gain  (CE=~1.0, uCE=~20)
        'cls_pw': 1.446,  # cls BCELoss positive_weight
-       'obj': 21.35,  # obj loss gain (*=80 for uBCE with 80 classes)
+       'obj': 21.35 / 80 * 21,  # obj loss gain (*=80 for uBCE with 80 classes)
        'obj_pw': 3.941,  # obj BCELoss positive_weight
        'iou_t': 0.2635,  # iou training threshold
        'lr0': 0.002324,  # initial learning rate (SGD=1E-3, Adam=9E-5)
@@ -371,13 +371,13 @@ def train():
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--epochs', type=int, default=2000)  # 500200 batches at bs 16, 117263 images = 273 epochs
+    parser.add_argument('--epochs', type=int, default=200)  # 500200 batches at bs 16, 117263 images = 273 epochs
     parser.add_argument('--batch-size', type=int, default=1)  # effective bs = batch_size * accumulate = 16 * 4 = 64
     parser.add_argument('--accumulate', type=int, default=2, help='batches to accumulate before optimizing')
     parser.add_argument('--cfg', type=str, default='cfg/yolov3.cfg', help='cfg file path')
     parser.add_argument('--data', type=str, default='data/egyptian.data', help='*.data file path')
     parser.add_argument('--multi-scale', action='store_true', help='adjust (67% - 150%) img_size every 10 batches')
-    parser.add_argument('--img-size', type=int, default=1600, help='inference size (pixels)')
+    parser.add_argument('--img-size', type=int, default=416, help='inference size (pixels)')
     parser.add_argument('--rect', action='store_true', help='rectangular training')
     parser.add_argument('--resume', action='store_true', help='resume training from last.pt')
     parser.add_argument('--transfer', action='store_true', help='transfer learning')
