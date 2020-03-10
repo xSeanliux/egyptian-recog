@@ -6,3 +6,6 @@ results.txt
 *.pt
 results.txt
 train_batch0.jpg
+test_batch0.jpg
+weights/best.pt
+*.pt
