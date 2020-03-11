@@ -5,7 +5,6 @@ from django.template.loader import get_template
 from django.views.decorators.csrf import csrf_exempt 
 @csrf_exempt
 
-
 # Create your views here.
 
 def index(request):
@@ -19,13 +18,10 @@ def work(request):
         img_con = request.FILES.get('image_content')
         img = Img(img_name=img_name, img_con=img_con)
         img.save()
-    template = get_template('work-single.html')
-    html = template.render()
-    imgs = Img.objects.all()
     context = {
-        'imgs' : imgs
+        'imgs' : Img.objects.all()
     }
-    return HttpResponse(html, context)
+    return render(request, 'work-single.html', context)
 
 def about(request):
     template = get_template('about.html')
