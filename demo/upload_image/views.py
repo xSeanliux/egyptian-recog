@@ -21,14 +21,13 @@ def work(request):
         img.save()
     template = get_template('work-single.html')
     html = template.render()
-    return HttpResponse(html)
+    imgs = Img.objects.all()
+    context = {
+        'imgs' : imgs
+    }
+    return HttpResponse(html, context)
 
 def about(request):
     template = get_template('about.html')
-    html = template.render()
-    return HttpResponse(html)
-
-def contact(request):
-    template = get_template('contact.html')
     html = template.render()
     return HttpResponse(html)

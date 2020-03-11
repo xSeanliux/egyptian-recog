@@ -50,58 +50,36 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<li><a href="../index">Home</a></li>
-							<li class="active"><a href="../work">Work</a></li>
+							<li class="active"><a href="../demo">demo</a></li>
 							<li><a href="../about">About</a></li>
-							<li><a href="../contact">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	</nav>
-	<div class="container-wrap">
-		<aside id="fh5co-hero">
-			<div class="flexslider">
-				<ul class="slides">
-			   	<li style="background-image: url({% static 'images/img_bg_3.jpg' %});">
-			   		<div class="overlay-gradient"></div>
-		   			<div class="row">
-			   			<div class="col-md-6 col-md-offset-3 slider-text slider-text-bg">
-			   				<div class="slider-text-inner text-center">
-			   					<h1>Work</h1>
-									<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>
-			   				</div>
-			   			</div>
-			   		</div>
-			   	</li>		   	
-			  	</ul>
-		  	</div>
-		</aside>		
+	<div class="container-wrap">	
 		<div id="fh5co-work">
 			<div class="row">
 				<div class="col-md-8">
 					<a class="image-popup img-portfolio-detail">
-						<img src="{% static 'images/portfolio-1.jpg' %}" alt="Free HTML5 Template by FreeHTML5.co" class="img-responsive">
+						<img src="{{ item.img_con.url }}" alt="Free HTML5 Template by FreeHTML5.co" class="img-responsive">
 					</a>
 				</div>
 				<div class="col-md-4 fh5co-project-detail">
-					<h2 class="fh5co-project-title">古埃及文辨識</h2>
-					<span class="fh5co-project-sub">Package of the year</span>
-					<p></p>
 					<div class="container">
-						<form action="/upload_image/work/" enctype="multipart/form-data" method="post">
+						<form action="/upload_image/demo/" enctype="multipart/form-data" method="post">
 							{% csrf_token %}
-							<h4>請上傳圖片</h4>
-							<label for="image_content">圖片:</label><br>
-							<input type="file" name="image_content"><br><br>
-							<input type="submit" value="提交">
+							<h4>請上傳圖片以供辨識</h4>
+							<input type="file" name="image_content"><br>
+							<input type="submit" class="btn" value="提交">
 						</form>
 					</div>
 				</div>
 				
 				
 				<!-- <div class="col-md-4 text-center animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-1.jpg);">
+					<a href="#" class="demo" style="background-image: url(images/portfolio-1.jpg);">
 						<div class="desc">
 							<h3>Project Name</h3>
 							<span>Illustration</span>
@@ -109,7 +87,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-2.jpg);">
+					<a href="#" class="demo" style="background-image: url(images/portfolio-2.jpg);">
 						<div class="desc">
 							<h3>Project Name</h3>
 							<span>Brading</span>
@@ -117,7 +95,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-3.jpg);">
+					<a href="#" class="demo" style="background-image: url(images/portfolio-3.jpg);">
 						<div class="desc">
 							<h3>Project Name</h3>
 							<span>Illustration</span>
@@ -125,7 +103,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-4.jpg);">
+					<a href="#" class="demo" style="background-image: url(images/portfolio-4.jpg);">
 						<div class="desc">
 							<h3>Project Name</h3>
 							<span>Illustration</span>
@@ -133,7 +111,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-					<a href="#" class="work image-popup" style="background-image: url(images/portfolio-5.jpg);">
+					<a href="#" class="demo image-popup" style="background-image: url(images/portfolio-5.jpg);">
 						<div class="desc">
 							<h3>Project Name</h3>
 							<span>Brading</span>
@@ -141,7 +119,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center animate-box">
-					<a href="#" class="work image-popup" style="background-image: url(images/portfolio-6.jpg);">
+					<a href="#" class="demo image-popup" style="background-image: url(images/portfolio-6.jpg);">
 						<div class="desc">
 							<h3>Project Name</h3>
 							<span>Illustration</span>
